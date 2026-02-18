@@ -1,0 +1,24 @@
+{
+  "name": "festival-de-musica",
+  "version": "1.0.0",
+  "description": "Sitio para un festival de música con SASS",
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Gulp"
+  ],
+  "license": "ISC",
+  "author": "María Méndez",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "css": "gulp css",
+    "dev": "gulp dev"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.97.3"
+  }
+}
