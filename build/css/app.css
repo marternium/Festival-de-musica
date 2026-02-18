@@ -373,19 +373,36 @@ body > section {
   background-color: #4cb8b3;
 }
 .header .header-content {
-  padding: 2rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .header h1 {
   color: #fff;
-  margin: 0;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .header h1 {
+    margin: 0;
+    text-align: left;
+  }
 }
 
 .navigation-main {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
+}
+@media (min-width: 768px) {
+  .navigation-main {
+    flex-direction: row;
+  }
 }
 .navigation-main a {
   color: #fff;
