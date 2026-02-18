@@ -322,15 +322,15 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   color: #000;
+  font-size: 2rem;
 }
 
 p {
-  font-size: 2rem;
   color: #000;
   line-height: 1.5;
 }
 
-.contenedor {
+.container {
   width: 95%;
   max-width: 120rem;
   margin: 0 auto;
@@ -367,4 +367,30 @@ img {
 
 body > section {
   padding: 10rem 0;
+}
+
+.header {
+  background-color: #4cb8b3;
+}
+.header .header-content {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1 {
+  color: #fff;
+  margin: 0;
+}
+
+.navigation-main {
+  display: flex;
+  gap: 2rem;
+}
+.navigation-main a {
+  color: #fff;
+  font-size: 2.4rem;
+}
+.navigation-main a:hover {
+  color: #fdda00;
 }
