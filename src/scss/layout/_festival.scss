@@ -1,0 +1,23 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.festival{
+    @include m.tablet {
+        @include m.grid(2, 5rem);
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .sub{
+            font-weight: 700;
+            color: v.$color_green;
+        }
+        h2{
+            margin: 5rem 0 2rem 0;
+            @include m.tablet {
+                margin: 0 0 2rem 0;
+            }
+        }
+    }
+}

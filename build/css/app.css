@@ -464,3 +464,28 @@ body > section {
     text-align: left;
   }
 }
+
+@media (min-width: 768px) {
+  .festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.festival .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.festival .info .sub {
+  font-weight: 700;
+  color: #4cb8b3;
+}
+.festival .info h2 {
+  margin: 5rem 0 2rem 0;
+}
+@media (min-width: 768px) {
+  .festival .info h2 {
+    margin: 0 0 2rem 0;
+  }
+}
