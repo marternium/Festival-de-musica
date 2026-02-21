@@ -489,3 +489,58 @@ body > section {
     margin: 0 0 2rem 0;
   }
 }
+
+.lineup {
+  background-color: #f53756;
+  padding: 5rem 0;
+}
+.lineup h3, .lineup .day {
+  color: #fff;
+  text-align: center;
+}
+.lineup .day {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .stage-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.stage .stage-name {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 900;
+}
+
+.calendar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendar li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendar li span {
+  font-weight: 400;
+}
+
+.bg-yellow {
+  background-color: #fdda00;
+}
+.bg-yellow li:nth-child(odd) {
+  background-color: rgb(255, 222.9743083004, 23.5);
+}
+
+.bg-green {
+  background-color: #4cb8b3;
+}
+.bg-green li:nth-child(odd) {
+  background-color: rgb(94.258, 191.242, 186.752);
+}

@@ -1,0 +1,55 @@
+@use "sass:color";
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.lineup{
+    background-color: v.$color_pink;
+    padding: 5rem 0;
+    h3, .day{
+        color: v.$color_white;
+        text-align: center;
+    }
+    .day{
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+}
+
+.stage-container{
+    @include m.tablet {
+        @include m.grid(2, 2rem);
+    }
+}
+
+.stage{
+    .stage-name{
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 900;
+    }
+}
+
+.calendar{
+    @include m.list-reset;
+    li{
+        padding: 2.5rem;
+        font-weight: 700;
+        span{
+            font-weight: 400;
+        }
+    }
+}
+
+.bg-yellow{
+    background-color: v.$color_yellow;
+    li:nth-child(odd){
+        background-color: color.adjust(v.$color_yellow, $lightness: 5%)
+    }
+}
+.bg-green{
+    background-color: v.$color_green;
+    li:nth-child(odd){
+        background-color: color.adjust(v.$color_green, $lightness: 5%)
+    }
+}
