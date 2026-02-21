@@ -615,3 +615,13 @@ body > section {
 .pass-footer p:hover {
   background-color: rgb(86.8636363636, 34.8939393939, 112.1060606061);
 }
+
+.footer {
+  background-color: #f53756;
+  padding: 2rem 0;
+}
+.footer p {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
