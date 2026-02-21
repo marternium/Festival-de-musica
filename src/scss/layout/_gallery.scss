@@ -1,0 +1,21 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.gallery{
+    &-images{
+        @include m.grid(1);
+        @include m.mobile {
+            @include m.grid(2);
+        }
+        @include m.tablet {
+            @include m.grid(3);
+        }
+        @include m.desktop {
+            @include m.grid(4);
+        }
+        img{
+            height: 20rem;
+            object-fit: cover;
+        }
+    }
+}
