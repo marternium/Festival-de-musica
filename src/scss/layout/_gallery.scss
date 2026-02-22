@@ -19,3 +19,50 @@
         }
     }
 }
+
+.modal{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(v.$color_black, .5);
+    display: grid;
+    place-items: center;
+    animation: fadeIn ease-in .5s;
+    &.fade-out{
+        animation: fadeOut ease-in .5s;
+    }
+    img{
+        max-width: 100rem;
+
+    }
+}
+
+.btn-close{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: v.$color_black;
+    color: v.$color_white;
+    border: none;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
