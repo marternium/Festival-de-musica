@@ -375,6 +375,15 @@ body > section {
 .header {
   background-color: #4cb8b3;
 }
+@media (min-width: 768px) {
+  .header.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0.1rem 0.2rem 0.3rem #333;
+  }
+}
 .header .header-content {
   padding: 2rem;
 }
@@ -412,6 +421,9 @@ body > section {
   font-size: 2.4rem;
 }
 .navigation-main a:hover {
+  color: #fdda00;
+}
+.navigation-main a.active {
   color: #fdda00;
 }
 

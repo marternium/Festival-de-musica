@@ -1,6 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+    fixedNav();
     createGallery();
+    linkHighlight();
+    scrollNav();
 });
+
+function fixedNav(){
+    const header = document.querySelector(".header");
+    const festival = document.querySelector(".festival");
+
+    document.addEventListener('scroll', () => {
+        if(festival.getBoundingClientRect().bottom < 1){
+            header.classList.add('fixed');
+        } else {
+            header.classList.remove('fixed');
+        }
+    });
+}
 
 function createGallery(){
     const imageQuantity = 16;
@@ -44,4 +60,36 @@ function closeModal(){
         modal?.remove();
         document.body.classList.remove('overflow-hidden');
     }, 500);
+}
+
+function linkHighlight() {
+    document.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navigation-main a');
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (window.scrollY >= sectionTop - sectionHeight / 3) {
+                navLinks.forEach((link) => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${section.id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    });
+}
+
+function scrollNav() {
+    const navLinks = document.querySelectorAll('.navigation-main a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const section = document.querySelector(e.target.getAttribute('href'));
+            section.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
 }
