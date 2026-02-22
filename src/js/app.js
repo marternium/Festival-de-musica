@@ -26,6 +26,7 @@ function createGallery(){
         const image = document.createElement('img');
         image.src = `src/img/gallery/full/${i}.jpg`;
         image.alt = `Imagen de galería ${i}`;
+        image.loading = 'lazy';
         image.onclick = () => {
             showImage(i);
         }
